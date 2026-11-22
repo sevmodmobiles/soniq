@@ -1,26 +1,19 @@
-# SONIQ — Brand master v1.0
+# SONIQ — Brand assets (reference-locked, 2026-11-22)
 
-Status: approved by project owner, 2026-11-22.
+## Source of truth
+The user-approved raster image supplied in the SONIQ conversation (1536×486) is the visual reference. Do not generate new lettering or modify the wave/Q proportions. The SVG paths are a manual trace of the approved silhouette, not an exact mathematically verified vectorization. Neon bloom and reflection are raster effects and cannot be claimed pixel-identical in the SVG.
 
-## Master assets
-- `soniq-logo-dark.svg` — primary dark-background presentation, fixed 1120×260 canvas.
-- `soniq-logo-transparent.svg` — transparent canvas, for dark UI backgrounds.
-- `soniq-logo-monochrome.svg` — white single-color alternative for dark backgrounds.
+## Production files
+- `soniq-logo-flat.svg`: transparent, high-contrast vector for UI and print.
+- `soniq-logo-stage.svg`: same paths with controlled glow for the Live Stage dark interface.
+- `soniq-logo-monochrome-final.svg`: white single-color version.
+- `soniq-logo-traced-v1.svg`: preserved earlier vector candidate.
+- `soniq-logo-transparent.svg`: legacy path; not referenced by the site after migration.
 
-## Immutable identity
-- Seven rounded vertical equalizer bars in a symmetrical 1-2-3-4-3-2-1 rhythm.
-- Custom uppercase geometric SONIQ lettering, rendered as SVG paths (no font dependency).
-- Distinct diagonal violet Q tail.
-- Wordmark geometry, symbol, and spacing must not be regenerated in image models. Reference these SVG assets instead.
-
-## Palette
-- Background #08070D
-- Wordmark #FFFFFF
-- Violet #B34BFF
-- Wave gradient #F068FF → #802EFF
-
-## Usage
-- Keep aspect ratio and clear space; no stretching, recoloring, or adding effects to the master artwork.
-- For stage animations, apply glow/motion to a container, not by altering logo paths.
-- The generated image concept is visual inspiration; these SVGs are the stable production master, recreated as vector geometry, not an exact trace of the raster.
-- Trademark registration and clearance are not established.
+## Rules
+- Preserve geometry and viewBox across all three production files.
+- White wordmark, violet/pink wave and Q tail. Never dark wordmark on dark stage.
+- Use relative local asset paths; do not embed a font or regenerate the logo.
+- Maintain aspect ratio, minimum clear space equal to height of a wave bar, and avoid distortion.
+- Source raster remains the arbiter for future refinement. Do not claim measured similarity without reproducible pixel comparison.
+- No trademark clearance implied.
